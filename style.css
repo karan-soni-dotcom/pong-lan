@@ -1,0 +1,87 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Sci-Fi Background */
+body {
+    background: radial-gradient(circle, #0d0d0d 30%, #1a1a1a);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Game Container */
+#game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Neon Game Canvas */
+#gameCanvas {
+    background: linear-gradient(to right, #111, #222);
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px #00ffcc;
+    border-radius: 8px;
+}
+
+/* Sci-Fi Buttons */
+button {
+    background: transparent;
+    color: #00ffcc;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+/* Game Code Input */
+#gameCode {
+    background: transparent;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#gameCode:focus {
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+/* Glowing Animations */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00ffcc; }
+    50% { box-shadow: 0 0 20px #00ffcc; }
+    100% { box-shadow: 0 0 5px #00ffcc; }
+}
+
+#gameCanvas {
+    animation: glow 2s infinite alternate;
+    width: 90vw;  /* Responsive width */
+    height: 60vh; /* Responsive height */
+    max-width: 800px;
+    max-height: 500px;
+}
